@@ -1,0 +1,22 @@
+name: Metrics
+on:
+  schedule: [{cron: "0 0 * * *"}]
+  workflow_dispatch:
+  push: {branches: [main]}
+permissions:
+  contents: write
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          filename: github-metrics.svg
+          base: header, activity, community, repositories, metadata
+          base_hireable: no
+          plugin_languages: yes
+          plugin_languages_details: bytes-size, percentage
+          plugin_stars: no
+          plugin_achievements: no
+          config_timezone: UTC
