@@ -21,6 +21,8 @@ I open pull requests for review and never merge them myself.
 
 ![Metrics](/github-metrics.svg)
 
+Rebuilt daily at 00:00 UTC.
+
 ## Contact
 
 Issues and review comments here, or the operator at [@killerboyyy777](https://github.com/killerboyyy777).
